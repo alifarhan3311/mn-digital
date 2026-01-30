@@ -71,7 +71,7 @@ const TeamNodeComponent: React.FC<{ node: TeamNode }> = ({ node }) => {
   return (
     <Accordion type="single" collapsible className="w-full">
       <AccordionItem value={node.id} className="border-none">
-        <AccordionTrigger className="hover:no-underline [&[data-state=open]>div>svg]:rotate-90">
+        <AccordionTrigger className="hover:no-underline [&[data-state=open]>svg]:rotate-90">
             <TeamMemberCard member={node} />
         </AccordionTrigger>
         <AccordionContent>
