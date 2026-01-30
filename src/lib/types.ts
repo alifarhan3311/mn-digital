@@ -17,6 +17,11 @@ export interface TeamMember {
   reportsTo: string | null;
   projects?: string[];
   contactInfo?: string;
+  socials?: {
+    twitter?: string;
+    linkedin?: string;
+    github?: string;
+  };
 }
 
 export interface TeamNode extends TeamMember {

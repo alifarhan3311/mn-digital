@@ -42,15 +42,15 @@ export const services: Service[] = [
 
 export const teamMembers: TeamMember[] = [
   // Owner
-  { id: '1', name: 'Ali Farhan', role: 'CEO', avatarId: 'ceo', skills: ['Leadership', 'Strategy', 'Innovation'], reportsTo: null },
+  { id: '1', name: 'Ali Farhan', role: 'CEO', avatarId: 'ceo', skills: ['Leadership', 'Strategy', 'Innovation'], reportsTo: null, socials: { twitter: '#', linkedin: '#', github: '#' } },
 
   // Managers
-  { id: '2', name: 'Rajeel Siddiqui', role: 'Engineering Manager', avatarId: 'manager1', skills: ['Project Management', 'System Architecture'], reportsTo: '1' },
-  { id: '3', name: 'Sara Khan', role: 'Product Manager', avatarId: 'manager2', skills: ['Product Strategy', 'User Research'], reportsTo: '1' },
+  { id: '2', name: 'Rajeel Siddiqui', role: 'Engineering Manager', avatarId: 'manager1', skills: ['Project Management', 'System Architecture'], reportsTo: '1', socials: { linkedin: '#', github: '#' } },
+  { id: '3', name: 'Sara Khan', role: 'Product Manager', avatarId: 'manager2', skills: ['Product Strategy', 'User Research'], reportsTo: '1', socials: { twitter: '#', linkedin: '#' } },
 
   // Team Leads
-  { id: '4', name: 'Jane Doe', role: 'Frontend Lead', avatarId: 'teamlead1', skills: ['Frontend', 'React', 'UX/UI'], reportsTo: '2' },
-  { id: '5', name: 'John Smith', role: 'Backend Lead', avatarId: 'teamlead2', skills: ['Backend', 'Node.js', 'Databases'], reportsTo: '2' },
+  { id: '4', name: 'Jane Doe', role: 'Frontend Lead', avatarId: 'teamlead1', skills: ['Frontend', 'React', 'UX/UI'], reportsTo: '2', socials: { github: '#', linkedin: '#' } },
+  { id: '5', name: 'John Smith', role: 'Backend Lead', avatarId: 'teamlead2', skills: ['Backend', 'Node.js', 'Databases'], reportsTo: '2', socials: { github: '#' } },
   { id: '6', name: 'Emily White', role: 'Mobile Lead', avatarId: 'teamlead3', skills: ['Mobile Dev', 'iOS', 'Android'], reportsTo: '3' },
 
   // Employees

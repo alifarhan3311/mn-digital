@@ -14,6 +14,9 @@ export default {
         headline: ['var(--font-inter)', 'sans-serif'],
         code: ['monospace'],
       },
+      transitionTimingFunction: {
+        'cubic-bezier': 'cubic-bezier(0.68, -0.55, 0.27, 1.55)',
+      },
       boxShadow: {
         'neumorphic': '6px 6px 12px #d1d9e6, -6px -6px 12px #ffffff',
         'neumorphic-inset': 'inset 6px 6px 12px #d1d9e6, inset -6px -6px 12px #ffffff',
