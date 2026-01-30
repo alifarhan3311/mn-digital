@@ -5,9 +5,7 @@ import Image from 'next/image';
 import { teamMembers } from '@/lib/mock-data';
 import type { TeamMember, TeamNode } from '@/lib/types';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { Card } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
+import { cn } from '@/lib/utils';
 
 function buildTeamTree(members: TeamMember[]): TeamNode[] {
   const memberMap = new Map<string, TeamNode>();
@@ -37,54 +35,71 @@ const TeamMemberCard: React.FC<{ member: TeamMember }> = ({ member }) => {
   const avatar = PlaceHolderImages.find(img => img.id === member.avatarId);
 
   return (
-    <Card className="w-full p-4 shadow-neumorphic dark:shadow-neumorphic-dark">
-      <div className="flex items-center gap-4">
+    <div className="flex flex-col items-center text-center w-48 group cursor-pointer">
+      <div className="relative">
         {avatar && (
           <Image
             src={avatar.imageUrl}
             alt={member.name}
-            width={80}
-            height={80}
-            className="rounded-full"
+            width={100}
+            height={100}
+            className="rounded-full transition-all duration-300 group-hover:scale-110"
             data-ai-hint={avatar.imageHint}
           />
         )}
-        <div>
-          <h4 className="text-lg font-bold">{member.name}</h4>
-          <p className="text-primary">{member.role}</p>
-          <div className="mt-2 flex flex-wrap gap-1">
-            {member.skills.map(skill => (
-              <Badge key={skill} variant="secondary">{skill}</Badge>
-            ))}
-          </div>
-        </div>
+        <div className="absolute inset-0 rounded-full border-4 border-primary/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 scale-110" />
       </div>
-    </Card>
+      <div className="mt-4">
+        <h4 className="text-lg font-bold transition-colors duration-300 group-hover:text-primary">{member.name}</h4>
+        <p className="text-primary/80">{member.role}</p>
+      </div>
+    </div>
   );
 };
 
 const TeamNodeComponent: React.FC<{ node: TeamNode }> = ({ node }) => {
-  if (node.children.length === 0) {
-    return <TeamMemberCard member={node} />;
-  }
+  const hasChildren = node.children && node.children.length > 0;
 
   return (
-    <Accordion type="single" collapsible className="w-full">
-      <AccordionItem value={node.id} className="border-none">
-        <AccordionTrigger className="hover:no-underline [&[data-state=open]>svg]:rotate-90">
-            <TeamMemberCard member={node} />
-        </AccordionTrigger>
-        <AccordionContent>
-          <div className="ml-8 mt-4 flex flex-col gap-4 border-l-2 border-primary/20 pl-8">
-            {node.children.map(child => (
-              <TeamNodeComponent key={child.id} node={child} />
-            ))}
+    <div className="flex flex-col items-center text-center">
+      <TeamMemberCard member={node} />
+      {hasChildren && (
+        <div className="flex justify-center pt-8 relative">
+          {/* Vertical line from parent */}
+          <div className="absolute top-0 h-8 w-px bg-primary/30" />
+          
+          <div className="flex">
+            {node.children.map((child, index) => {
+              const isFirst = index === 0;
+              const isLast = index === node.children.length - 1;
+              const hasSiblings = node.children.length > 1;
+
+              return (
+                <div key={child.id} className="px-4 relative">
+                  {/* Vertical line up to horizontal connector */}
+                  <div className="absolute bottom-full h-8 w-px bg-primary/30 left-1/2 -translate-x-1/2" />
+                  
+                  {/* Horizontal Connector */}
+                  {hasSiblings && (
+                    <div className={cn(
+                      "absolute bottom-full h-px bg-primary/30",
+                      isFirst && "left-1/2 w-1/2",
+                      isLast && "right-1/2 w-1/2",
+                      !isFirst && !isLast && "left-0 w-full"
+                    )} />
+                  )}
+
+                  <TeamNodeComponent node={child} />
+                </div>
+              );
+            })}
           </div>
-        </AccordionContent>
-      </AccordionItem>
-    </Accordion>
+        </div>
+      )}
+    </div>
   );
 };
+
 
 export function Team() {
   const teamTree = useMemo(() => buildTeamTree(teamMembers), []);
@@ -98,10 +113,12 @@ export function Team() {
             The creative minds and technical wizards behind our success.
           </p>
         </div>
-        <div className="mt-12 mx-auto max-w-4xl">
-          {teamTree.map(rootNode => (
-            <TeamNodeComponent key={rootNode.id} node={rootNode} />
-          ))}
+        <div className="mt-12 flex justify-center overflow-x-auto p-4">
+          <div className="flex">
+            {teamTree.map(rootNode => (
+              <TeamNodeComponent key={rootNode.id} node={rootNode} />
+            ))}
+          </div>
         </div>
       </div>
     </section>

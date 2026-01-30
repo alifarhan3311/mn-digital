@@ -41,21 +41,14 @@ export const services: Service[] = [
 ];
 
 export const teamMembers: TeamMember[] = [
-  { id: "1", name: "Alex Johnson", role: "Owner / CEO", avatarId: "ceo", skills: ["Leadership", "Strategy"], reportsTo: null },
-  { id: "2", name: "Samantha Lee", role: "Manager", avatarId: "manager1", skills: ["Project Management", "Client Relations"], reportsTo: "1" },
-  { id: "3", name: "David Chen", role: "Manager", avatarId: "manager2", skills: ["Technical Architecture", "Team Leadership"], reportsTo: "1" },
-  { id: "4", name: "Maria Garcia", role: "Team Lead", avatarId: "teamlead1", skills: ["Frontend", "React", "UX/UI"], reportsTo: "2" },
-  { id: "5", name: "James Brown", role: "Team Lead", avatarId: "teamlead2", skills: ["Backend", "Node.js", "Databases"], reportsTo: "2" },
-  { id: "6", name: "Linda Williams", role: "Team Lead", avatarId: "teamlead3", skills: ["Mobile Dev", "iOS", "Android"], reportsTo: "3" },
-  { id: "7", name: "Robert Jones", role: "Team Lead", avatarId: "teamlead4", skills: ["DevOps", "Cloud", "CI/CD"], reportsTo: "3" },
-  { id: "8", name: "Emily White", role: "Web Developer", avatarId: "employee1", skills: ["React", "TypeScript"], reportsTo: "4" },
-  { id: "9", name: "Michael Green", role: "Web Developer", avatarId: "employee2", skills: ["Vue.js", "CSS"], reportsTo: "4" },
-  { id: "10", name: "Jessica Taylor", role: "Backend Developer", avatarId: "employee3", skills: ["Python", "Django"], reportsTo: "5" },
-  { id: "11", name: "Chris Harris", role: "Backend Developer", avatarId: "employee4", skills: ["Go", "Microservices"], reportsTo: "5" },
-  { id: "12", name: "Sarah Miller", role: "Mobile Developer", avatarId: "employee5", skills: ["Swift", "Kotlin"], reportsTo: "6" },
-  { id: "13", name: "Daniel Martinez", role: "Mobile Developer", avatarId: "employee6", skills: ["React Native"], reportsTo: "6" },
-  { id: "14", name: "Laura Clark", role: "DevOps Engineer", avatarId: "employee7", skills: ["AWS", "Docker"], reportsTo: "7" },
-  { id: "15", name: "Kevin Scott", role: "DevOps Engineer", avatarId: "employee8", skills: ["Kubernetes", "Terraform"], reportsTo: "7" },
+  { id: '1', name: 'Ali Farhan', role: 'Manager', avatarId: 'ceo', skills: ['Leadership', 'Strategy'], reportsTo: null },
+  { id: '2', name: 'Rajeel Siddiqui', role: 'Team Leader', avatarId: 'manager1', skills: ['Project Management', 'Team Leadership'], reportsTo: '1' },
+  { id: '3', name: 'Jane Doe', role: 'Frontend Developer', avatarId: 'teamlead1', skills: ['Frontend', 'React', 'UX/UI'], reportsTo: '2' },
+  { id: '4', name: 'John Smith', role: 'Backend Developer', avatarId: 'teamlead2', skills: ['Backend', 'Node.js', 'Databases'], reportsTo: '2' },
+  { id: '5', name: 'Emily White', role: 'Mobile App Developer', avatarId: 'employee5', skills: ['Mobile Dev', 'iOS', 'Android'], reportsTo: '2' },
+  { id: '6', name: 'Alex Johnson', role: 'AI Specialist', avatarId: 'employee1', skills: ['AI/ML', 'Python'], reportsTo: '3' },
+  { id: '7', name: 'Sarah Brown', role: 'UI/UX Designer', avatarId: 'employee2', skills: ['Figma', 'User Research'], reportsTo: '4' },
+  { id: '8', name: 'Michael Clark', role: 'QA Engineer', avatarId: 'employee3', skills: ['Testing', 'Automation'], reportsTo: '4' },
 ];
 
 export const companyInfo: CompanyInfo = {
