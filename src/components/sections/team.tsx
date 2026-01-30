@@ -35,7 +35,7 @@ const TeamMemberCard: React.FC<{ member: TeamMember }> = ({ member }) => {
   const avatar = PlaceHolderImages.find(img => img.id === member.avatarId);
 
   return (
-    <div className="flex flex-col items-center text-center w-48 group cursor-pointer">
+    <div className="group relative flex w-52 cursor-pointer flex-col items-center rounded-xl bg-card p-6 text-center transition-all duration-300 ease-in-out hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/20 dark:bg-card/60 dark:hover:bg-card/90">
       <div className="relative">
         {avatar && (
           <Image
@@ -43,15 +43,15 @@ const TeamMemberCard: React.FC<{ member: TeamMember }> = ({ member }) => {
             alt={member.name}
             width={100}
             height={100}
-            className="rounded-full transition-all duration-300 group-hover:scale-110"
+            className="rounded-full border-4 border-transparent transition-all duration-300 group-hover:scale-110 group-hover:border-primary/50"
             data-ai-hint={avatar.imageHint}
           />
         )}
-        <div className="absolute inset-0 rounded-full border-4 border-primary/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 scale-110" />
+        <div className="absolute inset-0 rounded-full bg-primary/10 opacity-0 ring-4 ring-primary/20 transition-opacity duration-300 group-hover:opacity-100 dark:bg-primary/30" />
       </div>
       <div className="mt-4">
-        <h4 className="text-lg font-bold transition-colors duration-300 group-hover:text-primary">{member.name}</h4>
-        <p className="text-primary/80">{member.role}</p>
+        <h4 className="text-lg font-bold text-foreground transition-colors duration-300 group-hover:text-primary">{member.name}</h4>
+        <p className="text-sm text-primary/80">{member.role}</p>
       </div>
     </div>
   );
@@ -64,9 +64,9 @@ const TeamNodeComponent: React.FC<{ node: TeamNode }> = ({ node }) => {
     <div className="flex flex-col items-center text-center">
       <TeamMemberCard member={node} />
       {hasChildren && (
-        <div className="flex justify-center pt-8 relative">
+        <div className="relative flex justify-center pt-12">
           {/* Vertical line from parent */}
-          <div className="absolute top-0 h-8 w-px bg-primary/30" />
+          <div className="absolute top-0 h-12 w-px bg-primary/50" />
           
           <div className="flex">
             {node.children.map((child, index) => {
@@ -75,14 +75,14 @@ const TeamNodeComponent: React.FC<{ node: TeamNode }> = ({ node }) => {
               const hasSiblings = node.children.length > 1;
 
               return (
-                <div key={child.id} className="px-4 relative">
+                <div key={child.id} className="relative px-8">
                   {/* Vertical line up to horizontal connector */}
-                  <div className="absolute bottom-full h-8 w-px bg-primary/30 left-1/2 -translate-x-1/2" />
+                  <div className="absolute bottom-full left-1/2 h-12 w-px -translate-x-1/2 bg-primary/50" />
                   
                   {/* Horizontal Connector */}
                   {hasSiblings && (
                     <div className={cn(
-                      "absolute bottom-full h-px bg-primary/30",
+                      "absolute bottom-full h-px bg-primary/50",
                       isFirst && "left-1/2 w-1/2",
                       isLast && "right-1/2 w-1/2",
                       !isFirst && !isLast && "left-0 w-full"
@@ -113,7 +113,7 @@ export function Team() {
             The creative minds and technical wizards behind our success.
           </p>
         </div>
-        <div className="mt-12 flex justify-center overflow-x-auto p-4">
+        <div className="mt-12 flex justify-center overflow-x-auto p-12">
           <div className="flex">
             {teamTree.map(rootNode => (
               <TeamNodeComponent key={rootNode.id} node={rootNode} />
