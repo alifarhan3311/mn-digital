@@ -1,4 +1,4 @@
-import type {Config} from 'tailwindcss';
+import type { Config } from 'tailwindcss';
 
 export default {
   darkMode: ['class'],
@@ -10,9 +10,15 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        body: ['Inter', 'sans-serif'],
-        headline: ['Inter', 'sans-serif'],
+        body: ['var(--font-inter)', 'sans-serif'],
+        headline: ['var(--font-inter)', 'sans-serif'],
         code: ['monospace'],
+      },
+      boxShadow: {
+        'neumorphic': '6px 6px 12px #d1d9e6, -6px -6px 12px #ffffff',
+        'neumorphic-inset': 'inset 6px 6px 12px #d1d9e6, inset -6px -6px 12px #ffffff',
+        'neumorphic-dark': '6px 6px 12px #1c2126, -6px -6px 12px #262b30',
+        'neumorphic-dark-inset': 'inset 6px 6px 12px #1c2126, inset -6px -6px 12px #262b30',
       },
       colors: {
         background: 'hsl(var(--background))',
@@ -88,10 +94,24 @@ export default {
             height: '0',
           },
         },
+        'blob-1': {
+          '0%, 100%': { transform: 'translate(0, 0) scale(1)' },
+          '25%': { transform: 'translate(20px, -30px) scale(1.1)' },
+          '50%': { transform: 'translate(-10px, 15px) scale(0.9)' },
+          '75%': { transform: 'translate(30px, 20px) scale(1.05)' },
+        },
+        'blob-2': {
+          '0%, 100%': { transform: 'translate(0, 0) scale(1)' },
+          '25%': { transform: 'translate(-15px, 25px) scale(1.05)' },
+          '50%': { transform: 'translate(20px, -10px) scale(1.1)' },
+          '75%': { transform: 'translate(-25px, -15px) scale(0.95)' },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
+        'blob-1': 'blob-1 15s infinite ease-in-out',
+        'blob-2': 'blob-2 18s infinite ease-in-out',
       },
     },
   },
