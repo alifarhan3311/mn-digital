@@ -8,24 +8,15 @@ export interface Service {
   icon: ForwardRefExoticComponent<Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>>;
 }
 
-export interface TeamMember {
-  id: string;
-  name: string;
-  role: string;
-  avatarId: string;
-  skills: string[];
-  reportsTo: string | null;
-  projects?: string[];
-  contactInfo?: string;
-  socials?: {
-    twitter?: string;
-    linkedin?: string;
-    github?: string;
-  };
-}
+export type ProjectCategory = 'Web Development' | 'Mobile Apps' | 'Graphic Design' | 'Others';
 
-export interface TeamNode extends TeamMember {
-  children: TeamNode[];
+export interface Project {
+  id: string;
+  title: string;
+  description: string;
+  category: ProjectCategory;
+  imageId: string;
+  link?: string;
 }
 
 export interface CompanyInfo {
@@ -36,6 +27,5 @@ export interface CompanyInfo {
   stats: {
     projects: number;
     clients: number;
-    teamSize: number;
   }
 }

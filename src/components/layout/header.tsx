@@ -9,7 +9,7 @@ import React from "react"
 const navLinks = [
   { name: "Home", href: "#home" },
   { name: "Services", href: "#services" },
-  { name: "Team", href: "#team" },
+  { name: "Projects", href: "#projects" },
   { name: "About", href: "#about" },
   { name: "Contact", href: "#contact" },
 ];

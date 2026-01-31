@@ -19,7 +19,7 @@ export function Footer() {
             <h4 className="font-semibold">Quick Links</h4>
             <Link href="#home" className="hover:text-primary" prefetch={false}>Home</Link>
             <Link href="#services" className="hover:text-primary" prefetch={false}>Services</Link>
-            <Link href="#team" className="hover:text-primary" prefetch={false}>Team</Link>
+            <Link href="#projects" className="hover:text-primary" prefetch={false}>Projects</Link>
             <Link href="#about" className="hover:text-primary" prefetch={false}>About Us</Link>
             <Link href="#contact" className="hover:text-primary" prefetch={false}>Contact</Link>
           </div>

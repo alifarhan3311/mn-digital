@@ -5,7 +5,6 @@ import { Award, Briefcase, Users, Zap } from 'lucide-react';
 const stats = [
   { name: 'Projects Done', value: companyInfo.stats.projects, icon: Briefcase },
   { name: 'Happy Clients', value: companyInfo.stats.clients, icon: Users },
-  { name: 'Team Members', value: companyInfo.stats.teamSize, icon: Award },
   { name: 'Years of Experience', value: 5, icon: Zap },
 ];
 
@@ -28,7 +27,7 @@ export function About() {
               </div>
             </div>
           </div>
-          <div className="grid grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
             {stats.map((stat, index) => (
               <Card key={index} className="shadow-neumorphic dark:shadow-neumorphic-dark">
                 <CardContent className="flex flex-col items-center justify-center p-6 text-center">

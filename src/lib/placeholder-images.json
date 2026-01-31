@@ -1,94 +1,52 @@
 {
   "placeholderImages": [
     {
-      "id": "ceo",
-      "description": "CEO avatar",
-      "imageUrl": "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxwcm9mZXNzaW9uYWwlMjBwb3J0cmFpdHxlbnwwfHx8fDE3Njk3NTEwOTl8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "professional portrait"
+      "id": "project1",
+      "description": "Web development project showcase",
+      "imageUrl": "https://images.unsplash.com/photo-1680016661694-1cd3faf31c3a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHx3ZWJzaXRlJTIwZGVzaWdufGVufDB8fHx8MTc2OTg0MTY2MHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "website design"
     },
     {
-      "id": "manager1",
-      "description": "Manager 1 avatar",
-      "imageUrl": "https://images.unsplash.com/photo-1560250097-0b93528c311a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBwb3J0cmFpdHxlbnwwfHx8fDE3Njk3NTEwOTl8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "professional portrait"
+      "id": "project2",
+      "description": "Mobile app project showcase",
+      "imageUrl": "https://images.unsplash.com/photo-1555020368-9e1b4cf78a52?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxhcHAlMjBzY3JlZW58ZW58MHx8fHwxNzY5ODQwMjQzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "app screen"
     },
     {
-      "id": "manager2",
-      "description": "Manager 2 avatar",
-      "imageUrl": "https://images.unsplash.com/photo-1560250097-0b93528c311a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBwb3J0cmFpdHxlbnwwfHx8fDE3Njk3NTEwOTl8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "professional portrait"
+      "id": "project3",
+      "description": "Graphic design project showcase",
+      "imageUrl": "https://images.unsplash.com/photo-1769120062502-81a154df0960?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxhYnN0cmFjdCUyMGdyYXBoaWN8ZW58MHx8fHwxNzY5ODA2NDQ5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "abstract graphic"
     },
     {
-      "id": "teamlead1",
-      "description": "Team Lead 1 avatar",
-      "imageUrl": "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxwcm9mZXNzaW9uYWwlMjBwb3J0cmFpdHxlbnwwfHx8fDE3Njk3NTEwOTl8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "professional portrait"
+      "id": "project4",
+      "description": "Another web development project",
+      "imageUrl": "https://images.unsplash.com/photo-1635183607544-bf69187cc310?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxkYXNoYm9hcmQlMjB1aXxlbnwwfHx8fDE3Njk3ODQ1MTJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "dashboard ui"
     },
     {
-      "id": "teamlead2",
-      "description": "Team Lead 2 avatar",
-      "imageUrl": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxwcm9mZXNzaW9uYWwlMjBwb3J0cmFpdHxlbnwwfHx8fDE3Njk3NTEwOTl8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "professional portrait"
+      "id": "project5",
+      "description": "A different mobile app project",
+      "imageUrl": "https://images.unsplash.com/photo-1654764451078-de55e650649e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxtb2JpbGUlMjBpbnRlcmZhY2V8ZW58MHx8fHwxNzY5ODc3MzY3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "mobile interface"
     },
     {
-      "id": "teamlead3",
-      "description": "Team Lead 3 avatar",
-      "imageUrl": "https://images.unsplash.com/photo-1581065178047-8ee15951ede6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxwcm9mZXNzaW9uYWwlMjBwb3J0cmFpdHxlbnwwfHx8fDE3Njk3NTEwOTl8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "professional portrait"
+      "id": "project6",
+      "description": "A branding graphic design project",
+      "imageUrl": "https://images.unsplash.com/photo-1766224241626-18d39c69f802?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxsb2dvJTIwYnJhbmRpbmd8ZW58MHx8fHwxNzY5ODgzNDQwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "logo branding"
     },
     {
-      "id": "teamlead4",
-      "description": "Team Lead 4 avatar",
-      "imageUrl": "https://images.unsplash.com/photo-1544168190-79c17527004f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8cHJvZmVzc2lvbmFsJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzY5NzUxMDk5fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "professional portrait"
+      "id": "project7",
+      "description": "An e-commerce web project",
+      "imageUrl": "https://images.unsplash.com/photo-1527689368864-3a821dbccc34?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxlY29tbWVyY2UlMjB3ZWJzaXRlfGVufDB8fHx8MTc2OTgzNzE1MHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "ecommerce website"
     },
     {
-      "id": "employee1",
-      "description": "Employee 1 avatar",
-      "imageUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxwcm9mZXNzaW9uYWwlMjBwb3J0cmFpdHxlbnwwfHx8fDE3Njk3NTEwOTl8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "professional portrait"
-    },
-    {
-      "id": "employee2",
-      "description": "Employee 2 avatar",
-      "imageUrl": "https://images.unsplash.com/photo-1544168190-79c17527004f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8cHJvZmVzc2lvbmFsJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzY5NzUxMDk5fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "professional portrait"
-    },
-    {
-      "id": "employee3",
-      "description": "Employee 3 avatar",
-      "imageUrl": "https://images.unsplash.com/photo-1560250097-0b93528c311a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBwb3J0cmFpdHxlbnwwfHx8fDE3Njk3NTEwOTl8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "professional portrait"
-    },
-    {
-      "id": "employee4",
-      "description": "Employee 4 avatar",
-      "imageUrl": "https://images.unsplash.com/photo-1544168190-79c17527004f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8cHJvZmVzc2lvbmFsJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzY5NzUxMDk5fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "professional portrait"
-    },
-    {
-      "id": "employee5",
-      "description": "Employee 5 avatar",
-      "imageUrl": "https://images.unsplash.com/photo-1581065178047-8ee15951ede6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxwcm9mZXNzaW9uYWwlMjBwb3J0cmFpdHxlbnwwfHx8fDE3Njk3NTEwOTl8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "professional portrait"
-    },
-    {
-      "id": "employee6",
-      "description": "Employee 6 avatar",
-      "imageUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxwcm9mZXNzaW9uYWwlMjBwb3J0cmFpdHxlbnwwfHx8fDE3Njk3NTEwOTl8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "professional portrait"
-    },
-    {
-      "id": "employee7",
-      "description": "Employee 7 avatar",
-      "imageUrl": "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxwcm9mZXNzaW9uYWwlMjBwb3J0cmFpdHxlbnwwfHx8fDE3Njk3NTEwOTl8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "professional portrait"
-    },
-    {
-      "id": "employee8",
-      "description": "Employee 8 avatar",
-      "imageUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxwcm9mZXNzaW9uYWwlMjBwb3J0cmFpdHxlbnwwfHx8fDE3Njk3NTEwOTl8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "professional portrait"
+      "id": "project8",
+      "description": "Miscellaneous other project",
+      "imageUrl": "https://images.unsplash.com/photo-1738892887249-f2d6cefb9f3c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHx0ZWNoJTIwY29uY2VwdHxlbnwwfHx8fDE3Njk4ODM0Mzl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "tech concept"
     }
   ]
 }

@@ -1,5 +1,5 @@
 import { Code2, Smartphone, PenTool, TrendingUp, Search, Cloud } from "lucide-react";
-import type { Service, TeamMember, CompanyInfo } from "./types";
+import type { Service, Project, CompanyInfo } from "./types";
 
 export const services: Service[] = [
   {
@@ -40,27 +40,73 @@ export const services: Service[] = [
   },
 ];
 
-export const teamMembers: TeamMember[] = [
-  // Owner
-  { id: '1', name: 'Ali Farhan', role: 'CEO', avatarId: 'ceo', skills: ['Leadership', 'Strategy', 'Innovation'], reportsTo: null, socials: { twitter: '#', linkedin: '#', github: '#' } },
-
-  // Managers
-  { id: '2', name: 'Rajeel Siddiqui', role: 'Engineering Manager', avatarId: 'manager1', skills: ['Project Management', 'System Architecture'], reportsTo: '1', socials: { linkedin: '#', github: '#' } },
-  { id: '3', name: 'Sara Khan', role: 'Product Manager', avatarId: 'manager2', skills: ['Product Strategy', 'User Research'], reportsTo: '1', socials: { twitter: '#', linkedin: '#' } },
-
-  // Team Leads
-  { id: '4', name: 'Jane Doe', role: 'Frontend Lead', avatarId: 'teamlead1', skills: ['Frontend', 'React', 'UX/UI'], reportsTo: '2', socials: { github: '#', linkedin: '#' } },
-  { id: '5', name: 'John Smith', role: 'Backend Lead', avatarId: 'teamlead2', skills: ['Backend', 'Node.js', 'Databases'], reportsTo: '2', socials: { github: '#' } },
-  { id: '6', name: 'Emily White', role: 'Mobile Lead', avatarId: 'teamlead3', skills: ['Mobile Dev', 'iOS', 'Android'], reportsTo: '3' },
-
-  // Employees
-  { id: '7', name: 'Alex Johnson', role: 'Frontend Developer', avatarId: 'employee1', skills: ['AI/ML', 'Python', 'React'], reportsTo: '4' },
-  { id: '8', name: 'Maria Garcia', role: 'Frontend Developer', avatarId: 'employee2', skills: ['Vue.js', 'CSS Animations'], reportsTo: '4' },
-  { id: '9', name: 'David Chen', role: 'Backend Developer', avatarId: 'employee3', skills: ['Go', 'Microservices'], reportsTo: '5' },
-  { id: '10', name: 'Michael Clark', role: 'Backend Developer', avatarId: 'employee4', skills: ['Python', 'Django', 'DevOps'], reportsTo: '5' },
-  { id: '11', name: 'Jessica Brown', role: 'iOS Developer', avatarId: 'employee5', skills: ['Swift', 'SwiftUI'], reportsTo: '6' },
-  { id: '12', name: 'Chris Lee', role: 'Android Developer', avatarId: 'employee6', skills: ['Kotlin', 'Jetpack Compose'], reportsTo: '6' },
+export const projects: Project[] = [
+  {
+    id: "proj-1",
+    title: "E-commerce Platform",
+    description: "A scalable e-commerce solution with a custom CMS and payment integration.",
+    category: "Web Development",
+    imageId: "project1",
+    link: "#",
+  },
+  {
+    id: "proj-2",
+    title: "Fitness Tracker App",
+    description: "A mobile app to track workouts, nutrition, and progress with social features.",
+    category: "Mobile Apps",
+    imageId: "project2",
+    link: "#",
+  },
+  {
+    id: "proj-3",
+    title: "Corporate Rebranding",
+    description: "A complete visual overhaul for a major tech company, including logo and brand guidelines.",
+    category: "Graphic Design",
+    imageId: "project3",
+    link: "#",
+  },
+  {
+    id: "proj-4",
+    title: "SaaS Dashboard",
+    description: "An intuitive and data-rich dashboard for a business intelligence SaaS product.",
+    category: "Web Development",
+    imageId: "project4",
+    link: "#",
+  },
+  {
+    id: "proj-5",
+    title: "Social Media App",
+    description: "A new social platform for niche communities with real-time chat and media sharing.",
+    category: "Mobile Apps",
+    imageId: "project5",
+    link: "#",
+  },
+  {
+    id: "proj-6",
+    title: "Product Packaging",
+    description: "Eye-catching packaging design for a new line of consumer electronics.",
+    category: "Graphic Design",
+    imageId: "project6",
+    link: "#",
+  },
+  {
+    id: "proj-7",
+    title: "Real Estate Portal",
+    description: "A comprehensive web portal for property listings with advanced search and map features.",
+    category: "Web Development",
+    imageId: "project7",
+    link: "#",
+  },
+  {
+    id: "proj-8",
+    title: "AI Chatbot Integration",
+    description: "Integrated a custom AI-powered chatbot for customer service automation.",
+    category: "Others",
+    imageId: "project8",
+    link: "#",
+  },
 ];
+
 
 export const companyInfo: CompanyInfo = {
     mission: "To empower businesses with innovative and transformative digital solutions, fostering growth and success in an ever-evolving technological landscape.",
@@ -69,7 +115,6 @@ export const companyInfo: CompanyInfo = {
     about: "Digital Morph is a full-service digital agency specializing in creating bespoke websites, mobile applications, and digital experiences. Our team of experts is passionate about pushing the boundaries of technology and design to create products that not only look good but also perform exceptionally. We believe in building strong partnerships with our clients to turn their ideas into reality.",
     stats: {
         projects: 150,
-        clients: 85,
-        teamSize: 15
+        clients: 85
     }
 }
