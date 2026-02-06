@@ -24,9 +24,9 @@ COPY --from=builder /app/public ./public
 
 # Set production environment
 ENV NODE_ENV=production
-ENV PORT=9200
+ENV PORT=9002
 
-EXPOSE 9200
+EXPOSE 9002
 
 # Run production server
 CMD ["npm", "start"]
