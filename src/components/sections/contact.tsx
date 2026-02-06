@@ -23,7 +23,6 @@ function SubmitButton() {
 
 export function Contact() {
   const { toast } = useToast();
-  const [inquiry, setInquiry] = useState('');
   const [message, setMessage] = useState('');
   const [isGenerating, startGenerating] = useTransition();
 
@@ -36,6 +35,7 @@ export function Contact() {
         title: 'Success!',
         description: state.message,
       });
+      setMessage('');
     } else if (state.type === 'error') {
       toast({
         variant: 'destructive',
@@ -47,7 +47,7 @@ export function Contact() {
 
   const handleGenerateMessage = () => {
     startGenerating(async () => {
-      const result = await generateMessageAction(inquiry);
+      const result = await generateMessageAction(message);
       if (result.error) {
         toast({
           variant: 'destructive',
@@ -86,38 +86,28 @@ export function Contact() {
                 {state.errors?.phone && <p className="text-sm text-destructive">{state.errors.phone[0]}</p>}
               </div>
               <div className="space-y-2">
-                <Label htmlFor="inquiry">Describe your inquiry briefly</Label>
+                <Label htmlFor="message">Info</Label>
                 <div className="relative">
-                  <Input
-                    id="inquiry"
-                    name="inquiry"
-                    placeholder="e.g., a new e-commerce website"
-                    value={inquiry}
-                    onChange={(e) => setInquiry(e.target.value)}
+                  <Textarea
+                    id="message"
+                    name="message"
+                    placeholder="e.g., I want to create a shoes website with categories, products, and Stripe integration."
+                    className="min-h-[120px] pr-12"
+                    value={message}
+                    onChange={(e) => setMessage(e.target.value)}
                   />
                   <Button
                     type="button"
                     size="icon"
                     variant="ghost"
-                    className="absolute right-1 top-1/2 -translate-y-1/2 h-8 w-8 rounded-full"
+                    className="absolute right-1 top-3 h-8 w-8 rounded-full"
                     onClick={handleGenerateMessage}
-                    disabled={isGenerating || !inquiry}
+                    disabled={isGenerating || !message}
                     aria-label="Generate message with AI"
                   >
                     {isGenerating ? <LoaderCircle className="animate-spin" /> : <Wand2 />}
                   </Button>
                 </div>
-              </div>
-              <div className="space-y-2">
-                <Label htmlFor="message">Message</Label>
-                <Textarea
-                  id="message"
-                  name="message"
-                  placeholder="Your detailed message..."
-                  className="min-h-[120px]"
-                  value={message}
-                  onChange={(e) => setMessage(e.target.value)}
-                />
                 {state.errors?.message && <p className="text-sm text-destructive">{state.errors.message[0]}</p>}
               </div>
               <SubmitButton />

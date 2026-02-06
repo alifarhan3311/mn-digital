@@ -37,11 +37,11 @@ const prompt = ai.definePrompt({
   name: 'generateInitialContactMessagePrompt',
   input: {schema: GenerateInitialContactMessageInputSchema},
   output: {schema: GenerateInitialContactMessageOutputSchema},
-  prompt: `You are a helpful assistant that generates a draft message for a contact form based on the user's inquiry description. The message should be polite and professional.
+  prompt: `You are a helpful assistant. Your task is to take a user's inquiry, which may be informal and in languages like English or Roman Urdu, and refine it into a polite, well-structured, and professional message. The goal is to make the user's request clear and easy to understand for the business they are contacting. The output should be in professional English.
 
-Inquiry Description: {{{inquiryDescription}}}
+User's Info: {{{inquiryDescription}}}
 
-Draft Message:`, 
+Refined Message:`,
 });
 
 const generateInitialContactMessageFlow = ai.defineFlow(
