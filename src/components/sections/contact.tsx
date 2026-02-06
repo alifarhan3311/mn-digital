@@ -81,6 +81,11 @@ export function Contact() {
                 {state.errors?.email && <p className="text-sm text-destructive">{state.errors.email[0]}</p>}
               </div>
               <div className="space-y-2">
+                <Label htmlFor="phone">Phone Number (Optional)</Label>
+                <Input id="phone" name="phone" type="tel" placeholder="Your Phone Number" />
+                {state.errors?.phone && <p className="text-sm text-destructive">{state.errors.phone[0]}</p>}
+              </div>
+              <div className="space-y-2">
                 <Label htmlFor="inquiry">Describe your inquiry briefly</Label>
                 <div className="relative">
                   <Input
